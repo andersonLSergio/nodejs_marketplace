@@ -20,3 +20,19 @@ module.exports = {
   ttl: 86400
 }
 ```
+
+## Email - Nodemailer
+
+File: `src/config/mail.js`
+
+```
+module.exports = {
+  host: 'smtp.mysmtphost.com,
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'myUserName',
+    pass: 'myPasswd'
+  }
+}
+```
