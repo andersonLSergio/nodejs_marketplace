@@ -13,7 +13,8 @@ class PurchaseController {
       from: '"Marketplace Staff" <descartavel01@outlook.com>',
       to: purchaseAd.author.email,
       subject: `Purchase Order: ${purchaseAd.title}`,
-      html: `<p>Test: ${content}</p>`
+      template: 'purchase',
+      context: { user, content, ad: purchaseAd }
     })
 
     return res.send()
