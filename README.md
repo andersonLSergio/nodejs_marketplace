@@ -39,7 +39,7 @@ module.exports = {
 
 ## Redis
 
-File: `src/config/mail.js`
+File: `src/config/redis.js`
 
 ```
 module.exports = {
