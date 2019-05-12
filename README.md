@@ -1,4 +1,4 @@
-# Credentials format
+# Credentials format (DotEnv)
 
 ## MongoDB
 
@@ -6,7 +6,7 @@ File: `src/config/database.js`
 
 ```
 module.exports = {
-  uri: 'myConnectionString'
+  uri: process.env.DB_URL
 }
 ```
 
@@ -16,7 +16,7 @@ File: `src/config/auth.js`
 
 ```
 module.exports = {
-  secret: 'mySecret',
+  secret: process.env.APP_SECRET,
   ttl: 86400
 }
 ```
@@ -27,12 +27,12 @@ File: `src/config/mail.js`
 
 ```
 module.exports = {
-  host: 'smtp.mysmtphost.com,
-  port: 587,
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
   secure: false,
   auth: {
-    user: 'myUserName',
-    pass: 'myPasswd'
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS
   }
 }
 ```
@@ -43,8 +43,8 @@ File: `src/config/redis.js`
 
 ```
 module.exports = {
-  host: '127.0.0.1',
-  port: 6379
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT
 }
 ```
 
@@ -54,6 +54,6 @@ File: `src/config/sentry.js`
 
 ```
 module.exports = {
-  dsn: 'mydsn'
+  dsn: process.env.SENTRY_DSN
 }
 ```
