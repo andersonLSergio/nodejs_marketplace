@@ -47,3 +47,13 @@ module.exports = {
   port: 6379
 }
 ```
+
+## Sentry
+
+File: `src/config/sentry.js`
+
+```
+module.exports = {
+  dsn: 'mydsn'
+}
+```
